@@ -1,0 +1,59 @@
+.header
+  display: block
+  padding: 13px 0 12px
+  background-color: rgb(242, 242, 242)
+  box-sizing: border-box
+
+.header-content
+  display: flex
+  justify-content: space-between
+  width: 100%
+
+.header-phone
+  position: relative
+  display: block
+  padding-left: 29px
+  font-size: rem(11)
+  line-height: lh(13,11)
+  font-family: $lato-regular
+  color: rgb(57, 57, 57)
+
+  &:after
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    +fa-sprite($fa-var-phone, rgb(57, 57, 57), 12)
+
+
+.header-action-list
+  display: block
+  +clear
+
+.header-action-item
+  float: left
+  text-align: center
+  border-right: 1px solid rgb(57, 57, 57)
+  cursor: pointer
+
+  &:hover
+
+    .header-action-link
+      color: #d9bf8f
+
+
+  &:last-child
+    border-right: none
+
+
+.header-action-link
+  display: block
+  width: 130px
+  padding: 0 10px
+  font-size: rem(11)
+  line-height: lh(13, 11)
+  font-family: $lato-regular
+  color: rgb(57, 57, 57)
+  text-transform: uppercase
+  box-sizing: border-box
+  transition: color .3s ease

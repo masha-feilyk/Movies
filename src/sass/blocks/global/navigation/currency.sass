@@ -1,0 +1,73 @@
+.navigation-currency-holder
+  position: relative
+  display: block
+  z-index: 10
+  cursor: pointer
+
+.navigation-currency
+  display: block
+
+.navigation-currency-form
+  position: relative
+  display: block
+  padding: 10px 31px 10px 14px
+  background: #000
+  border: 1px solid transparent
+  box-sizing: border-box
+  transition: background .3s ease
+
+  &:hover
+    background: #fff
+    border-color: #000
+
+    &:after
+      color: #000
+
+    .navigation-currency-text
+      color: #000
+
+
+  &:after
+    position: absolute
+    top: 12px
+    right: 7px
+    transition: color .3s ease
+    +fa-sprite($fa-var-chevron-down, #fff, 10)
+
+
+.navigation-currency-text
+  display: block
+  font-size: rem(12)
+  font-family: $lato-bold
+  line-height: lh(18, 12)
+  color: #ffffff
+  text-transform: uppercase
+  transition: color .3s ease
+
+.navigation-currency-list
+  opacity: 0
+  visibility: hidden
+  position: absolute
+  top: 100%
+  right: 0
+  width: 100%
+  background: #000
+
+.navigation-currency-item
+  display: block
+  width: 100%
+  padding: 10px
+  border-bottom: 1px solid #eee
+  box-sizing: border-box
+
+  &:last-child
+    border-bottom: none
+
+
+.navigation-currency-value
+  display: block
+  font-size: rem(12)
+  font-family: $lato-bold
+  line-height: lh(18, 12)
+  color: #fff
+  text-transform: uppercase

@@ -1,0 +1,39 @@
+extends layout/main
+block content
+
+  include blocks/navigation/navigation
+
+  div.content-block
+    i.content-block-ico
+    include blocks/gallery/list
+
+  div.content-block
+    div.fix
+      include blocks/about
+
+  div.content-block
+    div.fix
+      div.content-block-title-holder
+        h2.content-block-title HandPicked
+
+      include blocks/category/category-list
+
+  div.content-block
+    div.fix
+      div.content-block-title-holder
+        h2.content-block-title Summer Collection
+
+      include blocks/preview/list
+
+  div.content-block
+    div.fix
+      div.content-block-title-holder
+        h2.content-block-title Our Brand
+
+      include blocks/gallery/brands
+
+
+  div.content-block-title-holder
+    h2.content-block-title Customers Says
+
+  include blocks/customers

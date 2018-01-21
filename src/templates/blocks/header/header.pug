@@ -1,0 +1,14 @@
+include mixin/action-list
+
+header.header
+  div.fix
+    div.header-content
+
+      a.header-phone(href="tel:+001 555 801") Call +001 555 801
+
+      +header-action-list([
+        [{text: 'WELCOME MSG!'}],
+        [{text: 'MY ACCOUNT'}],
+        [{text: 'MY WHISTLIST'}],
+        [{text: 'LOGIN'}]
+      ])

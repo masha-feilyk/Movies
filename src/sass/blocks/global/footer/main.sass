@@ -1,0 +1,92 @@
+.footer-holder
+  display: block
+  padding: 67px 0 30px
+  background: #141414
+
+.footer
+  position: relative
+  display: flex
+  width: 100%
+  padding-bottom: 70px
+
+.footer-ico
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 1px
+  background: #363636
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 10px 12px 0 12px
+    border-color: #363636 transparent transparent transparent
+
+
+.footer-block
+  display: block
+  font-size: 0
+
+  &.mod-menu
+    width: calc(100% - 512px)
+
+
+.footer-box
+  display: inline-block
+  vertical-align: top
+  width: auto
+  padding-right: 126px
+  box-sizing: border-box
+
+.footer-box-title
+  display: block
+  padding-bottom: 50px
+  font-size: rem(16)
+  font-family: $lato-bold
+  line-height: lh(18, 16)
+  color: #fff
+  text-transform: uppercase
+
+.footer-list
+  display: block
+
+.footer-item
+  display: block
+  margin-bottom: 14px
+
+.footer-link
+  display: inline-block
+  font-size: rem(14)
+  line-height: lh(16, 14)
+  font-family: $lato-regular
+  color: #737373
+  border-bottom: 1px solid transparent
+  transition: border-color .3s ease
+
+  &:hover
+    border-bottom-color: #737373
+
+
+.footer-info
+  display: block
+  margin-bottom: 30px
+
+.footer-domain
+  display: block
+  width: 380px
+  padding: 30px 10px
+  font-size: rem(14)
+  font-family: $lato-regular
+  line-height: lh(16, 14)
+  color: #434343
+  text-align: center
+  text-transform: uppercase
+  border: 1px solid #dedede
+  box-sizing: border-box

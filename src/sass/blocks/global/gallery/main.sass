@@ -1,0 +1,64 @@
+.gallery-list
+  position: relative
+  display: block
+  max-width: 1440px
+  max-height: 690px
+  margin: 0 auto
+  overflow: hidden
+
+  .slick-slide
+    outline: none !important
+
+
+.gallery-item
+  position: relative
+  display: block
+
+.gallery-img-holder
+  position: relative
+  display: block
+
+.gallery-img
+  position: relative
+  top: 0
+  left: 0
+  width: 100%
+
+.gallery-dots
+  position: absolute
+  bottom: 32px
+  left: 50%
+  transform: translateX(-50%)
+
+  li
+    position: relative
+    display: inline-block
+    margin: 0 6px
+
+    &:hover
+
+      button
+        background: #000
+
+    &.slick-active
+
+      button
+        background: #000
+        cursor: default
+
+    button
+      position: relative
+      display: block
+      width: 13px
+      height: 13px
+      margin: 0 auto
+      text-indent: -99999px
+      color: transparent
+      background: #b2b2b2
+      outline: none
+      box-sizing: border-box
+      transform: rotate(45deg)
+      transition: background .3s ease
+
+      &:focus
+        outline: none

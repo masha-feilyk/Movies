@@ -1,0 +1,79 @@
+.navigation-social
+  display: block
+  margin-right: 52px
+
+.navigation-social-list
+  display: block
+  margin: 0 -6px
+  +clear
+
+.navigation-social-item
+  float: left
+  padding: 0 6px
+
+.navigation-social-link
+  position: relative
+  display: block
+  width: 30px
+  height: 30px
+  background: #fff
+  border: 2px solid rgb(217, 191, 143)
+  border-radius: 50%
+  overflow: hidden
+  transition: background .3s ease
+
+  &:after
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateY(-50%) translateX(-50%)
+    transition: color .3s ease
+
+  &:hover
+    background: #d9bf8f
+
+  &.mod-facebook
+
+    &:hover
+
+      &:after
+        color: #fff
+
+    &:after
+      +fa-sprite($fa-var-facebook, #d9bf8f, 20)
+
+
+  &.mod-twitter
+
+    &:hover
+
+      &:after
+        color: #fff
+
+
+    &:after
+      +fa-sprite($fa-var-twitter, #d9bf8f, 20)
+
+
+  &.mod-instagram
+
+    &:hover
+
+      &:after
+        color: #fff
+
+
+    &:after
+      +fa-sprite($fa-var-instagram, #d9bf8f, 20)
+
+
+  &.mod-pinterest
+
+    &:hover
+
+      &:after
+        color: #fff
+
+
+    &:after
+      +fa-sprite($fa-var-pinterest, #d9bf8f, 20)

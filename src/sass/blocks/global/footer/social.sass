@@ -1,0 +1,101 @@
+.footer-social
+  display: block
+  margin-bottom: 49px
+
+.footer-social-title
+  display: block
+  margin-bottom: 20px
+  font-size: rem(25)
+  font-family: $lato-regular
+  line-height: lh(30, 25)
+  color: #434343
+  text-transform: uppercase
+
+.footer-social-list
+  display: block
+  margin: 0 -9px
+  +clear
+
+.footer-social-item
+  float: left
+  width: 68px
+  padding: 0 9px
+  box-sizing: border-box
+
+.footer-social-link
+  display: block
+  width: 49px
+  height: 49px
+  background: #ffffff
+  border: 1px solid transparent
+  border-radius: 50%
+  box-sizing: border-box
+  transition: border-color .3s ease, background .3s ease
+
+  &:hover
+    border-color: #fff
+    background: transparent
+
+  &:after
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateY(-50%) translateX(-50%)
+    transition: color .3s ease
+
+  &.mod-rss
+
+    &:hover
+
+      &:after
+        color: #fff
+
+    &:after
+      +fa-sprite($fa-var-rss, #141414, 25)
+
+  &.mod-facebook
+
+    &:hover
+
+      &:after
+        color: #fff
+
+
+    &:after
+      +fa-sprite($fa-var-facebook, #141414, 25)
+
+
+  &.mod-twitter
+
+    &:hover
+
+      &:after
+        color: #fff
+
+
+    &:after
+      +fa-sprite($fa-var-twitter, #141414, 25)
+
+
+  &.mod-instagram
+
+    &:hover
+
+      &:after
+        color: #fff
+
+
+    &:after
+      +fa-sprite($fa-var-instagram, #141414, 25)
+
+
+  &.mod-pinterest
+
+    &:hover
+
+      &:after
+        color: #fff
+
+
+    &:after
+      +fa-sprite($fa-var-pinterest, #141414, 25)
