@@ -1,64 +1,104 @@
-.gallery-list
+.gallery
   position: relative
   display: block
-  max-width: 1440px
-  max-height: 690px
+  max-width: 1250px
+  max-height: 500px
   margin: 0 auto
   overflow: hidden
+
+  &.slick-dotted
+    margin-bottom: 0
 
   .slick-slide
     outline: none !important
 
+  .slick-arrow
+    display: none !important
 
-.gallery-item
+
+.gallery__item
+  position: relative
+  display: block
+  max-height: 500px
+  height: 100%
+
+.gallery__img
   position: relative
   display: block
 
-.gallery-img-holder
-  position: relative
-  display: block
+  img
+    position: relative
+    top: 0
+    left: 0
+    width: 100%
 
-.gallery-img
-  position: relative
-  top: 0
-  left: 0
-  width: 100%
 
 .gallery-dots
   position: absolute
-  bottom: 32px
-  left: 50%
-  transform: translateX(-50%)
+  top: 50%
+  left: 40px
+  transform: translateY(-50%)
 
   li
     position: relative
-    display: inline-block
-    margin: 0 6px
+    display: block
+    margin: 10px 0
 
     &:hover
 
-      button
-        background: #000
+      .gallery-dots__link
+        border-color: #cd242a
+
 
     &.slick-active
 
-      button
-        background: #000
+      .gallery-dots__link
+        width: 30px
+        height: 30px
+        border-color: #cd242a
         cursor: default
 
-    button
-      position: relative
-      display: block
-      width: 13px
-      height: 13px
-      margin: 0 auto
-      text-indent: -99999px
-      color: transparent
-      background: #b2b2b2
-      outline: none
-      box-sizing: border-box
-      transform: rotate(45deg)
-      transition: background .3s ease
+      .gallery-dots__img,
+      .gallery-dots__text
+        display: block
 
-      &:focus
-        outline: none
+
+.gallery-dots__link
+  position: relative
+  display: block
+  width: 12px
+  height: 12px
+  margin: 0 auto
+  padding: 0
+  color: transparent
+  background: #fff
+  border: 2px solid #fff
+  outline: none
+  border-radius: 50%
+  box-sizing: border-box
+  transition: border-color .3s ease
+  cursor: pointer
+
+  &:focus
+    outline: none
+
+
+.gallery-dots__img
+  display: none
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateY(-50%) translateX(-50%)
+  width: 100%
+
+.gallery-dots__text
+  display: none
+  position: absolute
+  top: 50%
+  left: 40px
+  transform: translateY(-50%)
+  width: 150px
+  font-size: rem(14)
+  line-height: lh(30, 14)
+  font-family: $lato-bold
+  color: #fff

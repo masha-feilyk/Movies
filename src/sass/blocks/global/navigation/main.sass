@@ -1,18 +1,69 @@
-.navigation-holder
-  position: relative
+.navigation
   display: flex
   justify-content: space-between
-  align-items: center
-  width: 100%
-  padding: 17px 0 18px
+  padding: 30px 0
 
-.navigation-box
+.navigation__title
   display: block
-  width: calc(100% / 3)
+  font-size: rem(17)
+  line-height: lh(19, 17)
+  font-family: $lato-bold
+  color: #3f444e
+  text-transform: uppercase
 
-  &.mod-logo
-    text-align: center
+.navigation-breadcrumbs
+  display: block
 
-  &.mod-actions
-    display: flex
-    justify-content: flex-end
+.navigation-breadcrumbs__item
+  display: inline-block
+  font-size: rem(17)
+  line-height: lh(19, 17)
+  color: #3f444e
+  font-family: $lato-bold
+  font-style: italic
+
+.navigation-breadcrumbs__item_active
+  color: #989ca4
+
+.navigation-breadcrumbs__ico
+  display: inline-block
+  padding: 0 10px
+  font-size: rem(17)
+  line-height: lh(19, 17)
+  font-family: $lato-regular
+  color: #989ca4
+
+.navigation-search
+  display: block
+
+.navigation-search__box
+  position: relative
+  display: block
+
+.navigation-search__input
+  display: block
+  padding: 5px 20px 5px 0
+  font-size: rem(13)
+  line-height: lh(15, 13)
+  font-family: $lato-regular
+  font-style: italic
+  color: #3f444e
+  background-color: transparent
+  border-bottom: 1px solid #cacdd0
+  transition: border-bottom-color .3s ease
+  +placeholder(#9b9ea3, 13px)
+
+  &:focus
+    border-bottom: 1px solid #3f444e
+
+
+.navigation__ico
+  position: absolute
+  top: 50%
+  right: 0
+  transform: translateY(-50%)
+  width: 15px
+  height: 15px
+
+  &:after
+    +fa-sprite($fa-var-search, #40454f, 15)

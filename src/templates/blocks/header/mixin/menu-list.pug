@@ -1,0 +1,7 @@
+mixin header-menu-list(items)
+  ul.header-menu__list
+    each item in items
+      li.header-menu__item
+        a.header-menu__link(href="#")
+          i.header-menu__ico(class=item[0].icoMod)
+          span.header-menu__text= item[0].text

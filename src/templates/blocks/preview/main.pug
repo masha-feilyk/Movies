@@ -1,0 +1,46 @@
+include mixin/small
+include mixin/medium
+include mixin/large
+
+div.preview
+
+  div.preview__box
+    ul.preview__list
+      li.preview__item
+        +preview-small('../images/blocks/movies/guardians.png', '3,542', 'Guardians of the Galaxy')
+
+      li.preview__item.preview__item_flr
+        +preview-medium('4,681', '58', '648', 'width: 80%', 'May 03, 2013', '../images/blocks/movies/iron-man.png', 'Iron Man 3')
+
+      li.preview__item
+        +preview-small('../images/blocks/movies/guardians.png', '3,542', 'Guardians of the Galaxy')
+
+      li.preview__item
+        +preview-large('../images/blocks/movies/thor.png', 'width: 40%')
+
+
+  div.preview__box
+    ul.preview__list
+      li.preview__item
+        +preview-small('../images/blocks/movies/guardians.png', '3,542', 'Guardians of the Galaxy')
+
+      li.preview__item
+        +preview-small('../images/blocks/movies/guardians.png', '3,542', 'Guardians of the Galaxy')
+
+      li.preview__item
+        +preview-large('../images/blocks/movies/thor.png', 'width: 40%')
+
+      li.preview__item
+        +preview-small('../images/blocks/movies/guardians.png', '3,542', 'Guardians of the Galaxy')
+
+      li.preview__item
+        +preview-small('../images/blocks/movies/guardians.png', '3,542', 'Guardians of the Galaxy')
+
+
+  div.preview__box
+    ul.preview__list
+      li.preview__item
+        +preview-small('../images/blocks/movies/guardians.png', '3,542', 'Guardians of the Galaxy')
+
+      li.preview__item
+        +preview-medium('4,681', '58', '648', 'width: 80%', 'May 03, 2013', '../images/blocks/movies/iron-man.png', 'Iron Man 3')

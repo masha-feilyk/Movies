@@ -1,0 +1,118 @@
+.preview-small
+  position: relative
+  display: block
+  width: 218px
+  height: 200px
+  border-radius: 4px
+
+  &:after
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    box-shadow: inset 0 0 0 3px #cb242a
+    border-radius: 4px
+    z-index: 1
+
+
+  &.is-preview-small__download
+
+    &:after
+      content: ''
+
+    .preview-small__button
+      background-color: #cb242a
+
+      &:hover
+
+        &:after
+          animation: none
+
+
+.preview-small__img
+  position: relative
+  display: block
+  width: 100%
+  height: 100%
+
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+    width: 100%
+
+
+.preview-small__info
+  position: absolute
+  top: 0
+  left: 0
+  display: flex
+  justify-content: space-between
+  width: 100%
+  box-sizing: border-box
+  z-index: 10
+
+.preview-small__description
+  display: block
+  padding: 15px 15px 0
+
+.preview-small__ico
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 18px
+
+  &:after
+    +fa-sprite($fa-var-heart-o, #d8232a, 18)
+
+
+.preview-small__text
+  display: inline-block
+  vertical-align: middle
+  padding-left: 10px
+  font-size: rem(16)
+  line-height: lh(18, 16)
+  font-family: $lato-bold
+  color: #fff
+  text-transform: uppercase
+
+.preview-small__button
+  display: block
+  width: 18px
+  height: 18px
+  padding: 15px
+  border-radius: 0 4px 0 4px
+  cursor: pointer
+
+  &:after
+    +fa-sprite($fa-var-download, #fff, 18)
+
+  &:hover
+
+    &:after
+      animation: btn-animation 1s linear infinite
+
+
+.preview-small__title
+  position: absolute
+  bottom: 0
+  left: 0
+  display: block
+  padding: 0 15px 15px
+  font-size: rem(14)
+  line-height: lh(16, 14)
+  font-family: $lato-bold
+  color: #fff
+
+
+@keyframes btn-animation
+  0%
+    transform: scale(1)
+
+  60%
+    transform: scale(1.2)
+
+  100%
+    transform: scale(1)

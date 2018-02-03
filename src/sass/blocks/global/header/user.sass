@@ -1,0 +1,59 @@
+.header-user
+  display: flex
+  align-items: center
+
+.header-user__avatar
+  position: relative
+
+.header-user__img
+  position: relative
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  overflow: hidden
+
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%) translateZ(0)
+    width: 100%
+
+
+.header-user__notification
+  position: absolute
+  top: 0
+  right: 0
+  width: 8px
+  height: 8px
+  border-radius: 50%
+  background-color: #fff
+
+  &:after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateY(-50%) translateX(-50%)
+    width: 4px
+    height: 4px
+    background-color: #d8232a
+    border-radius: 50%
+
+
+.header-user__name
+  display: block
+  padding: 0 10px
+  font-size: rem(15)
+  line-height: rem(18, 15)
+  font-family: $lato-bold
+  color: #3f444e
+
+.header-user__button
+  display: block
+  width: 15px
+  height: 19px
+  cursor: pointer
+
+  &:after
+    +fa-sprite($fa-var-pencil, #9da0a5, 15)

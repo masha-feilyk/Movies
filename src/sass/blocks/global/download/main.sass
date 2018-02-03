@@ -1,0 +1,117 @@
+.download
+  position: fixed
+  bottom: 0
+  left: 0
+  opacity: 0
+  visibility: hidden
+  width: 100%
+  background-color: rgba(63, 68, 78, .7)
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.11)
+  z-index: 90
+
+  &.is-download-start
+    animation: download-animation ease 1s forwards
+
+
+.download__box
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 15px 0
+  box-sizing: border-box
+
+.download-info
+  display: block
+
+.download-info__ico
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 18px
+  margin-right: 10px
+
+  &:after
+    +fa-sprite($fa-var-download, #fff, 18)
+
+
+.download-info__description
+  display: inline-block
+  vertical-align: middle
+  margin-right: 10px
+  font-size: rem(13)
+  line-height: lh(18, 13)
+  font-family: $lato-bold
+  color: #fff
+
+.download-info__title
+  display: inline-block
+  vertical-align: middle
+  margin-right: 10px
+  font-size: rem(13)
+  line-height: lh(18, 13)
+  font-family: $lato-bold
+  color: #fff
+
+.download-info__status
+  display: inline-block
+  vertical-align: middle
+  font-size: rem(13)
+  line-height: lh(18, 13)
+  font-family: $lato-bold
+  color: #b4bfd6
+
+.download-action
+  display: block
+
+.download-action__item
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 18px
+  margin-right: 10px
+  cursor: pointer
+
+  &:last-child
+    margin-right: 0
+
+
+.download__delete
+  display: inline-block
+  width: 18px
+  height: 18px
+  margin-right: 10px
+
+  &:after
+    +fa-sprite($fa-var-trash, #fff, 18)
+
+
+.download__restart
+  display: inline-block
+  width: 18px
+  height: 18px
+  margin-right: 10px
+
+  &:after
+    +fa-sprite($fa-var-repeat, #fff, 18)
+
+
+.download__cancel
+  display: inline-block
+  width: 18px
+  height: 18px
+  margin-right: 10px
+
+  &:after
+    +fa-sprite($fa-var-times-circle, #fff, 18)
+
+
+@keyframes download-animation
+  from
+    opacity: 0
+    visibility: hidden
+    bottom: -50px
+
+  to
+    opacity: 1
+    visibility: visible
+    bottom: 0
