@@ -1,10 +1,23 @@
 $(document).ready(function () {
+    var $downloadBtn = $('.js-download-btn');
+
+    $downloadBtn.on('click', function () {
+        $(this).closest('.js-download-item').addClass('is-preview-small__download');
+        $('#download-info').addClass('is-download-start');
+    })
+});
+$(document).ready(function () {
     $('.js-gallery').slick({
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
-        dotsClass: 'gallery-dots'
+        dotsClass: 'gallery-dots',
+        customPaging: function (slider, i) {
+            var thumb = $(slider.$slides[i]).data('thumb');
+            var text = $(slider.$slides[i]).data('text');
+            return '<a class="gallery-dots__link"><img class="gallery-dots__img" src="' + thumb + '"><span class="gallery-dots__text">' + text + '</span></a>';
+        },
     });
 });
 /*! jQuery v1.11.1 | (c) 2005, 2014 jQuery Foundation, Inc. | jquery.org/license */
