@@ -1,0 +1,11 @@
+mixin preview-small(img, text, title)
+
+  div.preview-small.js-download-item
+    div.preview-small__img
+      img(src=img)
+    div.preview-small__info
+      div.preview-small__description
+        i.preview-small__ico
+        span.preview-small__text()= text
+      div.preview-small__button.js-download-btn
+    div.preview-small__title()= title

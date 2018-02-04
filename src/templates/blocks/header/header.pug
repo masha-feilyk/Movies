@@ -1,0 +1,27 @@
+include mixin/menu-list
+
+header.header
+  div.fix
+    div.header__content
+
+      div.header__logo
+        img(src="../images/blocks/logo-movie.png")
+
+
+      div.header-menu
+        +header-menu-list([
+          [{icoMod: 'header-menu__ico_comment', text: 'Comments'}],
+          [{icoMod: 'header-menu__ico_movies', text: 'Movies'}],
+          [{icoMod: 'header-menu__ico_video', text: 'Video'}],
+          [{icoMod: 'header-menu__ico_game', text: 'Game'}],
+          [{icoMod: 'header-menu__ico_tv', text: 'TV'}],
+          [{icoMod: 'header-menu__ico_exit', text: 'Exit'}]
+        ])
+
+      div.header-user
+        div.header-user__avatar
+          div.header-user__img
+            img(src="../images/blocks/avatar.jpg")
+          span.header-user__notification
+        span.header-user__name Carol Danvers
+        div.header-user__button

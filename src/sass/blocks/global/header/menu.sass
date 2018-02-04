@@ -1,0 +1,105 @@
+.header-menu__list
+  display: flex
+  margin: 0 -7px
+
+.header-menu__item
+  width: 70px
+  padding: 0 7px
+  box-sizing: border-box
+
+.header-menu__link
+  width: 50px
+  padding: 10px 0
+  text-align: center
+
+  &:hover
+
+    .header-menu__ico
+
+      &:after
+       color: #575c67
+
+
+    .header-menu__text
+      opacity: 1
+      visibility: visible
+
+
+.header-menu__ico
+  position: relative
+  display: inline-block
+  width: 20px
+  height: 20px
+
+  &:after
+    position: absolute
+    top: 0
+    left: 0
+    transition: color .3s ease
+
+.header-menu__ico_comment
+
+  &:after
+    +fa-sprite($fa-var-comment-o, #9b9ea3, 20)
+
+
+.header-menu__ico_movies
+
+  &:after
+    +fa-sprite($fa-var-video-camera, #9b9ea3, 20)
+
+
+.header-menu__ico_video
+
+  &:after
+    +fa-sprite($fa-var-play-circle-o, #9b9ea3, 20)
+
+
+.header-menu__ico_game
+
+  &:after
+    +fa-sprite($fa-var-gamepad, #9b9ea3, 20)
+
+
+.header-menu__ico_tv
+
+  &:after
+    +fa-sprite($fa-var-television, #9b9ea3, 20)
+
+
+.header-menu__ico_exit
+
+  &:after
+    +fa-sprite($fa-var-external-link, #9b9ea3, 20)
+
+
+.header-menu__text
+  opacity: 0
+  visibility: hidden
+  position: absolute
+  top: 100%
+  left: 50%
+  transform: translateX(-50%)
+  display: block
+  padding: 0 10px
+  font-size: rem(13)
+  line-height: lh(23, 13)
+  font-family: $lato-bold
+  color: rgb(255, 255, 255)
+  text-align: center
+  text-transform: uppercase
+  background-color: rgb(216, 35, 42)
+  border-radius: 4px
+  transition: opacity .3s ease, visibility .3s ease
+
+  &:after
+    content: ''
+    position: absolute
+    top: -4px
+    left: 50%
+    transform: translateX(-50%)
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 0 4px 4px 4px
+    border-color: transparent transparent rgb(216, 35, 42) transparent

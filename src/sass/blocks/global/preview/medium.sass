@@ -1,0 +1,139 @@
+.preview-medium
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 218px
+  height: 418px
+  background-color: #fff
+  border-radius: 4px
+  box-sizing: border-box
+
+.preview-medium__info
+  padding: 20px 15px
+
+.preview-medium__item
+  display: block
+  margin-bottom: 10px
+
+  &:last-child
+    margin-bottom: 0
+
+
+.preview-medium__ico
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  width: 16px
+  height: 16px
+
+.preview-medium__ico_like
+
+  &:after
+    +fa-sprite($fa-var-heart-o, #d8232a, 16)
+
+
+.preview-medium__ico_comment
+
+  &:after
+    +fa-sprite($fa-var-comment-o, #d8232a, 16)
+
+
+.preview-medium__ico_download
+
+  &:after
+    +fa-sprite($fa-var-arrow-down, #d8232a, 16)
+
+
+.preview-medium__text
+  display: inline-block
+  vertical-align: middle
+  padding-left: 10px
+  font-size: rem(14)
+  line-height: lh(16, 14)
+  font-family: $lato-bold
+  color: #3f444e
+
+.preview-medium__caption
+  display: inline-block
+  padding-right: 10px
+  font-size: rem(14)
+  line-height: lh(16, 14)
+  font-family: $lato-bold
+  color: #3f444e
+
+.preview-medium-rating
+  position: relative
+  display: inline-block
+  width: 70px
+  height: 11px
+  background-image: url("../images/blocks/rating-small-empty.png")
+
+.preview-medium-rating__value
+  position: absolute
+  top: 0
+  left: 1px
+  height: 11px
+  background-image: url("../images/blocks/rating-small-fill.png")
+  z-index: 1
+
+.preview-medium__date
+  display: inline-block
+  font-size: rem(14)
+  line-height: lh(16, 14)
+  font-family: $lato-regular
+  color: #3f444e
+
+.preview-medium__button
+  position: absolute
+  top: 0
+  right: 0
+  width: 35px
+  height: 35px
+  border-radius: 0 4px 0 4px
+  background-color: #3f444e
+  cursor: pointer
+  transition: background-color .3s ease
+
+  &:after
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+    transition: color .3s ease
+    +fa-sprite($fa-var-play-circle-o, #fff, 18)
+
+
+  &:hover
+    background-color: #fff
+
+    &:after
+      color: #3f444e
+
+
+.preview-medium__img
+  position: relative
+  display: block
+  width: 100%
+  height: 238px
+  background-color: #656971
+
+  img
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+    width: 100%
+    border-radius: 0 0 4px 4px
+
+
+.preview-medium__title
+  position: absolute
+  bottom: 0
+  left: 0
+  display: block
+  padding: 0 15px 15px
+  font-size: rem(14)
+  line-height: lh(16, 14)
+  font-family: $lato-bold
+  color: #fff
